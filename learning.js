@@ -142,7 +142,7 @@ function renderLearning(){
     node.querySelector(".trap p").textContent=q.trap;
     if(q.deep){
       const more=document.createElement("section");more.className="deep-explanation";
-      more.innerHTML=`<h3>具体例・もう一歩の理解</h3><p>${esc(q.deep.example)}</p><details><summary>理解を確かめる：${esc(q.deep.check)}</summary><p>${esc(q.deep.answer)}</p></details>`;
+      more.innerHTML=`<h3>確認問題</h3><details><summary>理解を確かめる：${esc(q.deep.check)}</summary><p>${esc(q.deep.answer)}</p></details>`;
       node.querySelector(".explanation").appendChild(more);
     }
     if(q.reference){const ref=document.createElement("p");ref.innerHTML=`<a href="${esc(q.reference[1])}" target="_blank" rel="noopener">参考：${esc(q.reference[0])}</a>`;node.querySelector(".explanation").appendChild(ref);}
